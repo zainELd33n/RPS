@@ -1,17 +1,22 @@
 let playerScore = 0;
 let computerScore = 0;
+const playerSelection = 'rock'.toLowerCase();
 
+let playerData = 0;
+let computerData = 0;
 //variable for availabe choices
 const items = ['rock', 'paper', 'scissors'];
 
 //randomizer
 function getComputerChoice() {
-    return items[Math.floor(Math.random()*items.length)];    
+    return items[Math.floor(Math.random()*items.length)];
 
 };
+const computerSelection = getComputerChoice();
 
 //comparer
 function playRound(playerSelection, computerSelection) {
+    for (let i = 0; i <= 5; i++){
     if(playerSelection == computerSelection) {
         return "It's a draw !"
     }
@@ -21,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
         return "Comp won"
         }else{
             playerScore++;
-            return 'Player won' 
+            return 'Player won'
         }
     }
     else if(playerSelection == 'scissors') {
@@ -43,19 +48,27 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
+}
 
-
-//function game() 
+function game() {
     for (let i = 0; i <= 5; i++) {
-        console.log()
+        playRound()
+        if(playRound() == "Player won"){
+            return playerData++;
+        }else if(playRound() == "Comp won"){
+            return computerData++;
+        }else{
+            break;
+        }
+
     }
+}
+
+console.log(game())
+
+console.log('Play result:  ' + playRound(playerSelection, computerSelection));
 
 
-const playerSelection = 'rock'.toLowerCase();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
 
 
-
-
-console.log(playerScore, computerScore)
+console.log('Play score: ' + playerScore, computerScore)
