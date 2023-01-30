@@ -16,7 +16,6 @@ const computerSelection = getComputerChoice();
 
 //comparer
 function playRound(playerSelection, computerSelection) {
-    for (let i = 0; i <= 5; i++){
     if(playerSelection == computerSelection) {
         return "It's a draw !"
     }
@@ -48,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
-}
+
 
 function game() {
     for (let i = 0; i <= 5; i++) {
