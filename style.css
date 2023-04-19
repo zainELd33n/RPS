@@ -16,6 +16,31 @@
 
 .btns {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.btns #rock-btn {
+    background-image: url(/img/rock.png);
+}
+#rock-btn, 
+#paper-btn, 
+#scissors-btn {
+    width: 400px;
+    height: 275px;
+    background: rgb(172, 170, 170);
+    border-radius: 0px 40px 0px 40px;
+} 
+
+#rock-btn:hover, 
+#paper-btn:hover, 
+#scissors-btn:hover {
+    transition: .6s;
+    background: rgb(214, 213, 213);
 }
 
+#rock-btn:active, 
+#paper-btn:active, 
+#scissors-btn:active {
+    transition: .02s;
+    background: rgb(66, 66, 66);
+}
