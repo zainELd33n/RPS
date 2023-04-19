@@ -38,7 +38,7 @@ img {
 #rock-btn:hover, 
 #paper-btn:hover, 
 #scissors-btn:hover {
-    transition: .6s;
+    transition: .4s;
     background: rgb(214, 213, 213);
 }
 
