@@ -19,9 +19,7 @@
     justify-content: space-around;
     margin-top: 15px;
 }
-.btns #rock-btn {
-    background-image: url(/img/rock.png);
-}
+
 #rock-btn, 
 #paper-btn, 
 #scissors-btn {
