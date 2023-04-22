@@ -14,35 +14,26 @@
     justify-content: space-around;
 }
 
-.btns {
+.inputs {
     display: flex;
     justify-content: space-around;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
-#rock-btn, 
-#paper-btn, 
-#scissors-btn {
-    width: 400px;
-    height: 275px;
-    background: rgb(172, 170, 170);
-    border-radius: 0px 40px 0px 40px;
-} 
-img {
-    width: 380px;
-    height: 270px;
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    width: 140px;
+    height: 140px;
+    border-radius: 0px 45px 0px 45px;
+    background-color: rgb(2, 166, 221);
 }
-
-#rock-btn:hover, 
-#paper-btn:hover, 
-#scissors-btn:hover {
+.item:hover {
     transition: .4s;
-    background: rgb(214, 213, 213);
-}
-
-#rock-btn:active, 
-#paper-btn:active, 
-#scissors-btn:active {
-    transition: .02s;
-    background: rgb(66, 66, 66);
+    scale: 1.1;
+    background-color: coral;
+    color: white;
 }
