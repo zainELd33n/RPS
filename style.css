@@ -33,7 +33,7 @@
     transition: all 250ms ease-in;
 }
 .item:hover {
-    
+    transition: .4s;
     scale: 1.1;
     background-color: coral;
     color: white;

@@ -2,10 +2,10 @@
 let inputs = document.querySelector(".inputs")
 let playerScore = 0;
 let compScore = 0;
-const items = ['rock', 'paper', 'scissors']; 
+const items = ['rock', 'paper', 'scissors'];
 
 let compChoice;
- inputs.addEventListener('pointerdown', () => {
+inputs.addEventListener('pointerdown', () => {
     compChoice = items[Math.floor(Math.random()*items.length)];
 });
 
