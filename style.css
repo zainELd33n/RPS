@@ -6,7 +6,7 @@
     padding: 0px 5px 0px 5px;
 }
 .score {
-    background: red;
+    background: rgb(0, 15, 155);
     display: flex;
     height: 180px;
     width: auto;
@@ -30,10 +30,16 @@
     height: 140px;
     border-radius: 0px 45px 0px 45px;
     background-color: rgb(2, 166, 221);
+    transition: all 250ms ease-in;
 }
 .item:hover {
-    transition: .4s;
+    
     scale: 1.1;
     background-color: coral;
     color: white;
+}
+.item:active {
+    transition: 300ms;
+    background-color: red;
+    color: black;
 }
