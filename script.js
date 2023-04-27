@@ -1,8 +1,10 @@
 //Declarations
 let inputs = document.querySelector(".inputs");
+let playerDisplay = document.querySelector("#pCountNum");
+let compDisplay = document.querySelector("#cCountNum");
 let count = 0;
-let playerScore = 0;
-let compScore = 0;
+let playerScore = 1;
+let compScore = 1;
 const items = ['rock', 'paper', 'scissors'];
 
 //Computer's randomized choice
@@ -18,8 +20,8 @@ let playerChoice = inputs.addEventListener('pointerdown', (e) => {
         const choice = target.dataset.item;
         console.log(` choice: ${choice}, compChoice: ${compChoice}`);
         //^ To make sure the logic works
-        let z = gameLogic(choice, compChoice);
-        console.log(z);
+        let checker = gameLogic(choice, compChoice);
+        console.log(checker);
 });
 
 //Comparing logic
@@ -28,18 +30,24 @@ let playerChoice = inputs.addEventListener('pointerdown', (e) => {
         return 'Draw, No points';
     }
     else if (a === 'rock' && b === 'scissors') {
+        playerAddition();
         playerScore++;
         return 'Player Won !';
+        
     }
     else if (a === 'paper' && b === 'rock') {
+        playerAddition();
         playerScore++;
         return 'Player Won !';
     }
     else if (a === 'scissors' && b === 'paper') {
+        playerAddition();
         playerScore++;
         return 'Player Won !';
+        
     }
     else {
+        compAddition();
         compScore++;
         return 'Computer Won !';
     }
@@ -48,4 +56,9 @@ let playerChoice = inputs.addEventListener('pointerdown', (e) => {
 
 //Testing area
 
-
+function playerAddition() {
+    playerDisplay.innerHTML = playerScore;
+};
+function compAddition() {
+    compDisplay.innerHTML = compScore;
+};
