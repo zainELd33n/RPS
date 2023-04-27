@@ -1,5 +1,6 @@
 //Declarations 
-let inputs = document.querySelector(".inputs")
+let inputs = document.querySelector(".inputs");
+let count = document.querySelector("#count")
 let playerScore = 0;
 let compScore = 0;
 const items = ['rock', 'paper', 'scissors'];
@@ -21,22 +22,25 @@ let playerChoice = inputs.addEventListener('pointerdown', (e) => {
 //Comparing system
  function gameLogic(a,b) {
     if(a === 'rock' && b === 'rock' || a === 'paper' && b === 'paper' || a === 'scissors' && b === 'scissors') {
-        return 'Draw, No points'
+        return 'Draw, No points';
     }
     else if (a === 'rock' && b === 'scissors') {
-        return 'Player Won !'
+        playerScore++;
+        return 'Player Won !';
     } 
     else if (a === 'paper' && b === 'rock') {
-        return 'Player Won !'
+        playerScore++;
+        return 'Player Won !';
     }
     else if (a === 'scissors' && b === 'paper') {
-        return 'Player Won !'
+        playerScore++;
+        return 'Player Won !';
     }
     else {
-        return 'Computer Won !'
+        compScore++;
+        return 'Computer Won !';
     }
-
- }
+ };
 
 
 //Testing area
