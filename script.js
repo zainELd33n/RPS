@@ -51,14 +51,15 @@ let playerChoice = inputs.addEventListener('pointerdown', (e) => {
         compScore++;
         return 'Computer Won !';
     }
- };
+};
 
-
-//Testing area
-
+//Scoring system
 function playerAddition() {
     playerDisplay.innerHTML = playerScore;
 };
 function compAddition() {
     compDisplay.innerHTML = compScore;
 };
+
+//Testing area
+
