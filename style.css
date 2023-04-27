@@ -1,4 +1,4 @@
-#player-score, #comp-score {
+#player-score, #comp-score, #counter {
     display: grid;
     background: rgb(226, 226, 226);
     border: 10px solid darkgray;
