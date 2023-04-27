@@ -43,3 +43,7 @@
     background-color: red;
     color: black;
 }
+
+#pCountNum, #cCountNum {
+    text-align: center;
+}
