@@ -2,7 +2,8 @@
 let inputs = document.querySelector(".inputs");
 let playerDisplay = document.querySelector("#pCountNum");
 let compDisplay = document.querySelector("#cCountNum");
-// let roundDisplay
+let roundInfo = document.querySelector("#roundInfo");
+let roundDisplay;
 let round = 0;
 let count = 0;
 let playerScore = 1;
