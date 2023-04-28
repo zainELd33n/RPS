@@ -1,14 +1,17 @@
+#bod{
+    background-color: darkgray;
+}
 #player-score, #comp-score, #counter {
-    display: grid;
     background: rgb(226, 226, 226);
     border: 10px solid darkgray;
     border-radius: 9px;
     padding: 0px 5px 0px 5px;
 }
 .score {
-    background: rgb(0, 15, 155);
+    background: rgb(65, 70, 114);
     display: flex;
-    height: 180px;
+    height: 280px;
+    border-radius: 0px 0px 30px 30px;
     width: auto;
     align-items: center;
     justify-content: space-around;
