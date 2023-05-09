@@ -1,16 +1,18 @@
 //Declarations
 let inputs = document.querySelector(".inputs");
+
 let playerDisplay = document.querySelector("#pCountNum");
 let compDisplay = document.querySelector("#cCountNum");
 let roundInfo = document.querySelector("#roundInfo");
-let roundDisplay;
-let round = 0;
+let roundDisplay = document.querySelector("#rCountNum");
+
+let round = 1;
 let count = 0;
 let playerScore = 1;
 let compScore = 1;
-const items = ['rock', 'paper', 'scissors'];
+const items = ['rock', 'paper', 'scissors', 'rock', 'paper', 'scissors'];
 
-
+function roundLogic() {}
 //Listener for the input of the player
 inputs.addEventListener('pointerdown', (e) => {
     const target = e.target;
@@ -18,40 +20,50 @@ inputs.addEventListener('pointerdown', (e) => {
     if(playerChoice != undefined){
         compChoice = items[Math.floor(Math.random()*items.length)];
         gameLogic(playerChoice, compChoice);
-        roundInfo.innerHTML = `Player chose ${playerChoice} and Computer chose ${compChoice}`
+        roundInfo.innerHTML = `Player chose ${playerChoice} and Computer chose ${compChoice}`;
         console.log(` choice: ${playerChoice}, compChoice: ${compChoice}`);
     }
 });
-
 //Comparing logic
-     function gameLogic(a, b) {
-        if(a != undefined){
+function gameLogic(a, b) {
+    if(a != undefined){
         if(a === 'rock' && b === 'rock' || a === 'paper' && b === 'paper' || a === 'scissors' && b === 'scissors') {
+            roundAddition();
+            round++;
             return 'Draw, No points';
         }
         if (a === 'rock' && b === 'scissors') {
+            roundAddition();
             playerAddition();
             playerScore++;
+            round++;
             return 'Player Won !';
         
         }
         if (a === 'paper' && b === 'rock') {
+            roundAddition();
             playerAddition();
             playerScore++;
+            round++;
             return 'Player Won !';
         }
         if (a === 'scissors' && b === 'paper') {
+            roundAddition();
             playerAddition();
             playerScore++;
+            round++;
             return 'Player Won !';
         
-        } 
-        compAddition();
-        compScore++;
-        return 'Computer Won !';
-        };
-        console.log('no choice')
+        } else {
+            roundAddition();
+            compAddition();
+            compScore++;
+            round++;
+            return 'Computer Won !';
+        }
     };
+    console.log('no choice')
+};
 
 //Scoring system
 function playerAddition() {
@@ -62,4 +74,6 @@ function compAddition() {
 };
 
 //Testing area
-
+function roundAddition() {
+    roundDisplay.innerHTML = round;
+}
