@@ -24,6 +24,16 @@ inputs.addEventListener('pointerdown', (e) => {
         console.log(` choice: ${playerChoice}, compChoice: ${compChoice}`);
     }
 });
+
+//Basic round logic
+function reload() {
+    location.reload()
+}
+function roundAddition() {
+    roundDisplay.innerHTML = round;
+    if(round === 5) setTimeout(reload, 650);
+}
+
 //Comparing logic
 function gameLogic(a, b) {
     if(a != undefined){
@@ -74,8 +84,3 @@ function compAddition() {
 };
 
 //Testing area
-function roundAddition() {
-    roundDisplay.innerHTML = round;
-    if(round === 5) location.reload();
-
-}
