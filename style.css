@@ -47,6 +47,6 @@
     color: black;
 }
 
-#pCountNum, #cCountNum {
+#pCountNum, #cCountNum, #counter {
     text-align: center;
 }
