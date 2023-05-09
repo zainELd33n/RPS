@@ -76,4 +76,6 @@ function compAddition() {
 //Testing area
 function roundAddition() {
     roundDisplay.innerHTML = round;
+    if(round === 5) location.reload();
+
 }
