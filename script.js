@@ -14,11 +14,12 @@ const items = ['rock', 'paper', 'scissors'];
 //Listener for the input of the player
 inputs.addEventListener('pointerdown', (e) => {
     const target = e.target;
-    const choice = target.dataset.item;
-    if(choice != undefined){
+    const playerChoice = target.dataset.item;
+    if(playerChoice != undefined){
         compChoice = items[Math.floor(Math.random()*items.length)];
-        roundInfo.innerHTML = `Player chose ${choice} and Computer chose ${compChoice}`
-        console.log(` choice: ${choice}, compChoice: ${compChoice}`);
+        gameLogic(playerChoice, compChoice);
+        roundInfo.innerHTML = `Player chose ${playerChoice} and Computer chose ${compChoice}`
+        console.log(` choice: ${playerChoice}, compChoice: ${compChoice}`);
     }
 });
 
