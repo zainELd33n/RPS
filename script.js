@@ -28,12 +28,14 @@ resetB.addEventListener('pointerdown', (e) => {
 inputs.addEventListener('pointerdown', (e) => {
     const target = e.target;
     const playerChoice = target.dataset.item;
-    if(playerChoice != undefined){
-        compChoice = items[Math.floor(Math.random()*items.length)];
-        gameLogic(playerChoice, compChoice);
-        roundInfo.innerHTML = `Player chose ${playerChoice} and Computer chose ${compChoice}`;
-        console.log(` choice: ${playerChoice}, compChoice: ${compChoice}`);
-    }
+    if(round != 6){
+        if(playerChoice != undefined){
+            compChoice = items[Math.floor(Math.random()*items.length)];
+            gameLogic(playerChoice, compChoice);
+            roundInfo.innerHTML = `Player chose ${playerChoice} and Computer chose ${compChoice}`;
+            console.log(` choice: ${playerChoice}, compChoice: ${compChoice}`);
+        };
+    };
 });
 
 //Basic round logic
