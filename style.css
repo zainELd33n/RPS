@@ -1,14 +1,14 @@
 #bod{
-    background-color: darkgray;
+    background-color: #0B2447;
 }
 #player-score, #comp-score, #counter {
-    background: rgb(226, 226, 226);
-    border: 10px solid darkgray;
+    background: #A5D7E8;
+    border: 10px solid #bee7f5;
     border-radius: 9px;
     padding: 0px 5px 0px 5px;
 }
 .score {
-    background: rgb(65, 70, 114);
+    background: #576CBC;
     display: flex;
     height: 280px;
     border-radius: 0px 0px 30px 30px;
@@ -41,7 +41,7 @@
     width: 140px;
     height: 140px;
     border-radius: 0px 45px 0px 45px;
-    background-color: rgb(2, 166, 221);
+    background-color: #F6F1F1;
     transition: all 250ms ease-in;
 }
 .item:hover {
