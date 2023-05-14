@@ -23,17 +23,17 @@ resetB.addEventListener('pointerdown', (e) => {
     resetB.setAttribute("style", "background-color: #4CAF50; color: white; height: 65px; width: 130px;");
     location.reload();
 });
-
 //Listener for the input of the player
 inputs.addEventListener('pointerdown', (e) => {
     const target = e.target;
-    const playerChoice = target.dataset.item;
+    const playerChoice1 = target.dataset.item;
+    const playerChoice = playerChoice1.fontcolor("red");
     if(round != 6){
         if(playerChoice != undefined){
-            compChoice = items[Math.floor(Math.random()*items.length)];
+            compChoice1 = items[Math.floor(Math.random()*items.length)];
+            compChoice = compChoice1.fontcolor("red");
             gameLogic(playerChoice, compChoice);
             roundInfo.innerHTML = `Player chose ${playerChoice} and Computer chose ${compChoice}`;
-            console.log(` choice: ${playerChoice}, compChoice: ${compChoice}`);
         };
     };
 });
