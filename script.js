@@ -12,13 +12,18 @@ let playerScore = 1;
 let compScore = 1;
 const items = ['rock', 'paper', 'scissors', 'rock', 'paper', 'scissors'];
 
+//Restarting Logic
 let reset = document.querySelector(".reset");
 const resetB = document.createElement("button");
+resetB.setAttribute("style", "background-color: white; color: black; border: 2px solid #4CAF50; height: 65px; width: 130px;");
 const resetText = document.createTextNode("Restart");
 resetB.appendChild(resetText);
 
+resetB.addEventListener('pointerdown', (e) => {
+    resetB.setAttribute("style", "background-color: #4CAF50; color: white; height: 65px; width: 130px;");
+    location.reload();
+});
 
-function roundLogic() {}
 //Listener for the input of the player
 inputs.addEventListener('pointerdown', (e) => {
     const target = e.target;
