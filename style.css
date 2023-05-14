@@ -16,6 +16,15 @@
     align-items: center;
     justify-content: space-around;
 }
+.reset {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 130px;
+    transition: all 0.4s;
+}
 
 .inputs {
     display: flex;
