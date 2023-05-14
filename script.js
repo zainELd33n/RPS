@@ -12,6 +12,12 @@ let playerScore = 1;
 let compScore = 1;
 const items = ['rock', 'paper', 'scissors', 'rock', 'paper', 'scissors'];
 
+let reset = document.querySelector(".reset");
+const resetB = document.createElement("button");
+const resetText = document.createTextNode("Restart");
+resetB.appendChild(resetText);
+
+
 function roundLogic() {}
 //Listener for the input of the player
 inputs.addEventListener('pointerdown', (e) => {
@@ -29,10 +35,7 @@ inputs.addEventListener('pointerdown', (e) => {
 function reload() {
     location.reload()
 }
-function roundAddition() {
-    roundDisplay.innerHTML = round;
-    if(round === 5) setTimeout(reload, 650);
-}
+
 
 //Comparing logic
 function gameLogic(a, b) {
@@ -82,5 +85,10 @@ function playerAddition() {
 function compAddition() {
     compDisplay.innerHTML = compScore;
 };
-
+function roundAddition() {
+    roundDisplay.innerHTML = round;
+    if(round === 5) reset.appendChild(resetB);
+};
 //Testing area
+// if (round === 5) { 
+// }
