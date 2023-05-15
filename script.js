@@ -32,7 +32,7 @@ inputs.addEventListener('pointerdown', (e) => {
         if(playerChoice != undefined){
             compChoice1 = items[Math.floor(Math.random()*items.length)];
             compChoice = compChoice1.fontcolor("red");
-            gameLogic(playerChoice, compChoice);
+            gameLogic(playerChoice1, compChoice1);
             roundInfo.innerHTML = `Player chose ${playerChoice} and Computer chose ${compChoice}`;
         };
     };
@@ -97,5 +97,3 @@ function roundAddition() {
     if(round === 5) reset.appendChild(resetB);
 };
 //Testing area
-// if (round === 5) { 
-// }
